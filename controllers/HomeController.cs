@@ -20,5 +20,17 @@ namespace WAD_SRMS_Project.controllers
         {
             return View();
         }
+        public IActionResult feedback(string username, string userpass)
+        {
+            if(username=="text" && userpass=="terxt")
+            {
+                ViewBag.Message = "login Successfully";
+            }
+            else
+            {
+                ViewBag.Message = "login not Successfully";
+            }
+            return View(Addmission);
+        }
     }
 }

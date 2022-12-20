@@ -6,155 +6,208 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-     <link rel="stylesheet" href="/css/StyleS   heet">
-   <style>
-       .title {
-    font-size: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-}
+  <head>
+    <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
+    <link rel="stylesheet" href="~/css/stylesheet/StyleSheet.css">
+   
+    <style>
+
+
+        .title {
+            font-size: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+        }
+
+        li a, .dropbtn {
+            text-decoration: none;
+            font-style: normal;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            font-size: 20px;
+            font-style: bold;
+        }
+
+        .navbar {
+            background-color: black;
+        }
+        .navbar a 
+        {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                margin: 10px;
+                font-style: normal;
+                font-size: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 30px 0;
+            padding: 5px;
+            display: flex;
+            justify-content: space-evenly;
+            border-style: solid;
+        }
+
+        body {
+            font-size: 16px;
+            background-color: white;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        /*
+                    .slider,
+                img {
+                    text-align: center;
+                }
+
+                    .slider img {
+                        width: 70%;
+                    }
+
+                */
 
 
 
-li a,.dropbtn {
-    text-decoration: none;
-    color: white;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    padding: 10px 50px;
-    font-size: 20px;
-    font-style: bold;
-}
+        .dropbtn {
+            background-color: gray;
+            color: black;
+            padding: 20px;
+            font-size: 16px;
+            margin: 10px;
+        }
 
-ul {
-    list-style-type: none;
-    margin: 30px 0;
-    padding: 5px;
-    display: flex;
-    justify-content: space-evenly;
-    border-style: solid;
-}
+        .dropdown-content {
+            position: absolute;
+            background-color: aqua;
+            min-width: 11px;
+            display: none;
+        }
 
-body {
-    font-size: 16px;
-    background-color:black;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-}
+            .dropdown-content a {
+                color: black;
+                padding: 10px 12px;
+                float: none;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
 
-.slider,
-img {
-    text-align: center;
-}
+        .main span {
+            font-size: 25px;
+            font-style: bold;
+        }
 
-.slider img {
-    width: 70%;
-}
+        p {
+            display: block;
+            margin-block-start: 0em;
+            margin-block-end: 2em;
+            margin-inline-start: 5px;
+            margin-inline-end: 5px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
 
-.container {
-    padding: 0 5%;
-}
+        .dropdown-content a:hover {
+            background-color: red;
+        }
 
-.dropbtn {
-    background-color: gray;
-    color: white;
-    padding: 20px;
-    font-size: 16px;
-}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-.dropdown-content {
-    position: absolute;
-    background-color: aqua;
-    min-width: 170px;
-    display: none;
-}
+        .dropdown:hover .dropbtn {
+            background-color: blue;
+        }
 
-.dropdown-content a {
-    color: black;
-    padding: 10px 12px;
-    float: none;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
+        /* Slideshow container */
+        .slideshow-container {
+            width:2500px;
+            
+            position:relative;
+            margin: auto;
+            z-index:-1;
+        }
 
-.main span {
-    font-size: 25px;
-    font-style:  bold;
-    
-}
+        /* Caption text */
+        .text {
+            color: black;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
 
-p {
-    display: block;
-    margin-block-start: 0em;
-    margin-block-end: 2em;
-    margin-inline-start: 5px;
-    margin-inline-end: 5px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-}
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: black;
+            font-size: 20px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
 
-.dropdown-content a:hover {
-    background-color: red;
-}
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: gray;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+        .active {
+            background-color: black;
+        }
 
-.dropdown:hover .dropbtn {
-    background-color: blue;
-}
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
 
-.Embed {
-    width: 500px;
-    height: 250px;
-}
-.link{
-    font-size: 50px;
-    
-}
-table{
-    justify-content: center;
-    background-color: blueviolet;
-    border: solid;
-    width: 200px;
-    color: azure;
-    padding: 10px;
-    margin: 5px;
+        /* On smaller screens, decrease text size */
+        /* only screen and (max-width: 300px) {
+                    .text {
+                        font-size: 11px
+                    }
+                }*/
 
-}
-   </style>
+
+    </style>
 </head>
 
 <body>
+    <script src="~/js/"></script>
     <div class="title">
         <span class="heading">Student Result Management System</span>
     </div>
-   
-      
-  
-
     <div class="container">
         <div class="navbar">
             <ul>
 
-                <li> <a href="Assignment#1 web dev.html">Home</a></li>
-                <li> <a href="#Admin">Admin login </a></li>
-                
+                <li> <a href="index.cshtml">Home</a></li>
+                <li> <a href="adminlogin">Admin login </a></li>
+
                 <li> <a href="signup.html">SignUp</a></li>
-                <li> <a href="Adminlogin.html">Login</a></li>
+                <li> <a href="login.html">Login</a></li>
 
                 <div class="dropdown">
                     <button class="dropbtn">Faculities</button>
                     <div class="dropdown-content">
                         <a href="#Art">Arts</a>
-                        <a href="#Science">Science</a>
+                        <a href="facuilityofscience">Science</a>
                         <a href="#commerce">Commerce</a>
                         <a href="#Technology">Technology</a>
                         <a href="#Sport">Sports</a>
@@ -174,31 +227,93 @@ table{
                 </div>
             </ul>
         </div>
-        <div class="slider">
-            <img src="/image/student paper.jpg" class="slider-image" alt="image">
-        </div>
-       
-        <div class="Embed">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/pQN-pnXPaVg"
-                title="YouTube video player" frameborder="1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-        
 
-       
-        
+
+    
+
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="/image/student paper.jpg" alt="img#0" style="width:100%">
+                
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="~/image/wad project img1.jpg" alt="img#1" style="width:100% ">
+               
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="/image/wad project img4.jpg" alt="img#2" style="width:100%">
+               
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="/image/wad project img3.jpg" alt="img#3" style="width:100%">
+               
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">5/ 5</div>
+                <img src="/image/wad project img2.jpg" alt="img#4"style="width:100%">
+               
+            </div>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
+        </div>
+
+
+
         <div class="main">
             <span>About This Project</span>
-            <p>The main objective of the project is to provide the examination result to the student in a simple way.
+            <p>
+                The main objective of the project is to provide the examination result to the student in a simple way.
                 This project is useful for students and institutions for getting the results in simple manner.
                 By a result analyzer with subject status and marks is an application tool for displaying the results in
                 secure way.
             </p>
         </div>
-
-
     </div>
+    <form method="get" action="/home/feedback">
+        username:<input type="text" placeholder="username" name="username" />
+        userpassword:<input type="password" placeholder="userpassword" name="userpass" />
+        <input type="submit" />
+    </form>
+    
+    
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+        slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000); 
+        }
+    </script>
+
 </body>
 
 </html>
