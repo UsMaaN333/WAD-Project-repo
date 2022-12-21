@@ -4,10 +4,10 @@ namespace WAD_SRMS_Project.Data
 {
     public class AppDbcontext:DbContext
     {
-        public AppDbcontext(DbContextOptions<DbContext> options) : base(options)
+        public AppDbcontext(DbContextOptions<AppDbcontext> options) : base(options)
         {
 
         }
-        public DbSet<login> login { get; set; }
+        public DbSet<loginModel>? login { get; set; }
     }
 }

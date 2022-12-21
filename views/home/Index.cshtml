@@ -189,7 +189,7 @@
 </head>
 
 <body>
-    <script src="~/js/"></script>
+    <script src="/NewFolder/"></script>
     <div class="title">
         <span class="heading">Student Result Management System</span>
     </div>
@@ -197,17 +197,17 @@
         <div class="navbar">
             <ul>
 
-                <li> <a href="index.cshtml">Home</a></li>
-                <li> <a href="adminlogin">Admin login </a></li>
+                <li> <a href="~/home/Index">Home</a></li>
+                <li> <a href="~/home/Adminlogin">Admin login </a></li>
 
-                <li> <a href="signup.html">SignUp</a></li>
-                <li> <a href="login.html">Login</a></li>
+                <li> <a href="~/home/signup">SignUp</a></li>
+                <li> <a href="~/home/login">Login</a></li>
 
                 <div class="dropdown">
                     <button class="dropbtn">Faculities</button>
                     <div class="dropdown-content">
                         <a href="#Art">Arts</a>
-                        <a href="facuilityofscience">Science</a>
+                        <a href="~/home/facuilityofscience">Science</a>
                         <a href="#commerce">Commerce</a>
                         <a href="#Technology">Technology</a>
                         <a href="#Sport">Sports</a>
@@ -218,7 +218,7 @@
                 <div class="dropdown">
                     <button class="dropbtn">Student </button>
                     <div class="dropdown-content">
-                        <a href="Addmission.html">Admissions</a>
+                        <a href="~/home/Addmission">Admissions</a>
                         <a href="#">Scholarship</a>
                         <a href="#">Examination</a>
                         <a href="#">Results</a>
@@ -291,28 +291,28 @@
         <input type="submit" />
     </form>
     
-    
-    <script>
-        let slideIndex = 0;
-        showSlides();
+   <script>
+    let slideIndex = 0;
+    showSlides();
 
-        function showSlides() {
-            let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
+    function showSlides() {
+        let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
           }
-        slideIndex++;
+    slideIndex++;
           if (slideIndex > slides.length) {slideIndex = 1}
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
           }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 3000); 
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); 
         }
-    </script>
+</script>
+   
 
 </body>
 

@@ -2,7 +2,7 @@
 
 namespace WAD_SRMS_Project.models
 {
-    public class login
+    public class loginModel
     {
         [Key]
         public int Id { get; set; }
