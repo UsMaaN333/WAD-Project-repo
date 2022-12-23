@@ -6,10 +6,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
     <link rel="stylesheet" href="~/css/stylesheet/StyleSheet.css">
-   
+    <script src="/js/sliderimg.js"></script>
     <style>
 
 
@@ -35,8 +35,8 @@
         .navbar {
             background-color: black;
         }
-        .navbar a 
-        {
+
+            .navbar a {
                 float: left;
                 display: block;
                 color: white;
@@ -45,7 +45,7 @@
                 margin: 10px;
                 font-style: normal;
                 font-size: 20px;
-        }
+            }
 
         ul {
             list-style-type: none;
@@ -63,16 +63,16 @@
             font-family: 'Times New Roman', Times, serif;
         }
         /*
-                    .slider,
-                img {
-                    text-align: center;
-                }
+                            .slider,
+                        img {
+                            text-align: center;
+                        }
 
-                    .slider img {
-                        width: 70%;
-                    }
+                            .slider img {
+                                width: 70%;
+                            }
 
-                */
+                        */
 
 
 
@@ -129,11 +129,10 @@
 
         /* Slideshow container */
         .slideshow-container {
-            width:2500px;
-            
-            position:relative;
+            width: 2500px;
+            position: relative;
             margin: auto;
-            z-index:-1;
+            z-index: -1;
         }
 
         /* Caption text */
@@ -179,17 +178,27 @@
 
         /* On smaller screens, decrease text size */
         /* only screen and (max-width: 300px) {
-                    .text {
-                        font-size: 11px
-                    }
-                }*/
-
-
+                            .text {
+                                font-size: 11px
+                            }
+                        }*/
+        avarter {
+            background-size: 32px 32px;
+            border: 0;
+          
+            border-radius: 50%;
+            display: block;
+            margin: 0px;
+            position: relative;
+            height: 32px;
+            width: 32px;
+            z-index: 0;
+        }
     </style>
 </head>
 
 <body>
-    <script src="/NewFolder/"></script>
+
     <div class="title">
         <span class="heading">Student Result Management System</span>
     </div>
@@ -198,16 +207,13 @@
             <ul>
 
                 <li> <a href="~/home/Index">Home</a></li>
-                <li> <a href="~/home/Adminlogin">Admin login </a></li>
 
-                <li> <a href="~/home/signup">SignUp</a></li>
-                <li> <a href="~/home/login">Login</a></li>
 
                 <div class="dropdown">
                     <button class="dropbtn">Faculities</button>
                     <div class="dropdown-content">
                         <a href="#Art">Arts</a>
-                        <a href="~/home/facuilityofscience">Science</a>
+                        <a href="~/home/science">Science</a>
                         <a href="#commerce">Commerce</a>
                         <a href="#Technology">Technology</a>
                         <a href="#Sport">Sports</a>
@@ -223,13 +229,22 @@
                         <a href="#">Examination</a>
                         <a href="#">Results</a>
                         <a href="#">Manage Results</a>
+                        <a href="~/home/Attedence">Attedence</a>
                     </div>
                 </div>
+
+                <li> <a href="~/home/Adminlogin">Admin login </a></li>
+                <li> <a href="/home/signup">SignUp</a></li>
+                <li> <a href="/home/login">Login</a></li>
+
+
             </ul>
         </div>
 
+        <div class="avarter">
+            <img src=~/image/loginavarter.png />
+        </div>
 
-    
 
 
         <div class="slideshow-container">
@@ -237,29 +252,29 @@
             <div class="mySlides fade">
                 <div class="numbertext">1 / 5</div>
                 <img src="/image/student paper.jpg" alt="img#0" style="width:100%">
-                
+
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">2 / 5</div>
                 <img src="~/image/wad project img1.jpg" alt="img#1" style="width:100% ">
-               
+
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">3 / 5</div>
                 <img src="/image/wad project img4.jpg" alt="img#2" style="width:100%">
-               
+
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">4 / 5</div>
                 <img src="/image/wad project img3.jpg" alt="img#3" style="width:100%">
-               
+
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">5/ 5</div>
-                <img src="/image/wad project img2.jpg" alt="img#4"style="width:100%">
-               
+                <img src="/image/wad project img2.jpg" alt="img#4" style="width:100%">
+
             </div>
         </div>
         <br>
@@ -290,29 +305,29 @@
         userpassword:<input type="password" placeholder="userpassword" name="userpass" />
         <input type="submit" />
     </form>
-    
-   <script>
-    let slideIndex = 0;
-    showSlides();
 
-    function showSlides() {
-        let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-          }
-    slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-          }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 3000); 
-        }
-</script>
-   
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+              }
+        slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+              }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000);
+            }
+    </script>
 
 </body>
 

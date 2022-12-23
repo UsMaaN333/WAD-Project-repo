@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+             /*header menu*/
+        .title {
+            font-size: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+        }
+
+        li a, .dropbtn {
+            text-decoration: none;
+            font-style: normal;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            font-size: 20px;
+            font-style:oblique;
+        }
+
+        .navbar {
+            background-color: black;
+        }
+
+        .navbar a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                margin: 10px;
+                font-style: normal;
+                font-size: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 30px 0;
+            padding: 5px;
+            display: flex;
+            justify-content: space-evenly;
+            border-style: solid;
+        }
+
+        body {
+            font-size: 16px;
+            background-color: white;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .dropbtn {
+            background-color: gray;
+            color: black;
+            padding: 20px;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        .dropdown-content {
+            position: absolute;
+            background-color: aqua;
+            min-width: 11px;
+            display: none;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 10px 12px;
+                float: none;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                    background-color: red;
+                }
+
+            .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+             .dropdown:hover .dropbtn {
+            background-color: blue;
+        }
+        </style>
+        <body>
+             <header>
+        <div class="container">
+            <div class="navbar">
+                <ul>
+
+                    <li> <a href="/home/Index">Home</a></li>
+                    <li> <a href="~/home/Adminlogin">Admin login </a></li>
+
+                    <li> <a href="~/home/signup">SignUp</a></li>
+                    <li> <a href="~/home/login">Login</a></li>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Faculities</button>
+                        <div class="dropdown-content">
+                            <a href="#Art">Arts</a>
+                            <a href="~/home/facuitityofscience">Science</a>
+                            <a href="#commerce">Commerce</a>
+                            <a href="#Technology">Technology</a>
+                            <a href="#Sport">Sports</a>
+                            <a href="#Other">Others</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Student </button>
+                        <div class="dropdown-content">
+                            <a href="~/home/Addmission">Admissions</a>
+                            <a href="#">Scholarship</a>
+                            <a href="#">Examination</a>
+                            <a href="#">Results</a>
+                            <a href="#">Manage Results</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            </div>
+    </header>
+        </body>
+    </head>
+</html>

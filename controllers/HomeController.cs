@@ -20,6 +20,15 @@ namespace WAD_SRMS_Project.controllers
         {
             return View();
         }
+        public IActionResult Attedence()
+        {
+            return View();
+        }
+        public IActionResult Login()
+        {
+            return View();
+        }
+
         public IActionResult feedback(string username, string userpass)
         {
             if(username=="text" && userpass=="terxt")
