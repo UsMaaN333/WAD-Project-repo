@@ -28,6 +28,18 @@ namespace WAD_SRMS_Project.controllers
         {
             return View();
         }
+        public IActionResult science()
+        {
+            return View();
+        }
+        public IActionResult technology()
+        {
+            return View();
+        }
+        public IActionResult Result()
+        {
+            return View();
+        }
 
         public IActionResult feedback(string username, string userpass)
         {

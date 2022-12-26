@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WAD_SRMS_Project.models;
 
-namespace WAD_SRMS_Project.models
+namespace WAD_SRMS_Project.Models
 {
     public class AppDbContext:DbContext
     {
@@ -8,6 +9,6 @@ namespace WAD_SRMS_Project.models
         {
 
         }
-        public DbSet<loginModel> loginModels { get; set; }
+        public DbSet<MyyDataModel> DataModels { get; set; }
     }
 }
