@@ -9,6 +9,6 @@ namespace WAD_SRMS_Project.Models
         {
 
         }
-        public DbSet<MyyDataModel> DataModels { get; set; }
+        public DbSet<AddmissionModel> AddmissionModels { get; set; }
     }
 }

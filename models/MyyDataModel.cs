@@ -5,8 +5,7 @@ namespace WAD_SRMS_Project.models
 {
     public class MyyDataModel
     {
-        [Key]
-        public int Id { get; set; }
+        
 
 
         [Required(ErrorMessage = "Please Enter Correct  First Name")]

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+
+         <div class="container">
+        <div class="navbar">
+            <ul>
+
+                <li> <a href="~/home/Index">Home</a></li>
+
+
+                <div class="dropdown">
+                    <button class="dropbtn">Faculities</button>
+                    <div class="dropdown-content">
+                        <a href="#Art">Arts</a>
+                        <a href="~/home/science">Science</a>
+                        <a href="#commerce">Commerce</a>
+                        <a href="/home/technology">Technology</a>
+                        <a href="#Sport">Sports</a>
+
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Student </button>
+                    <div class="dropdown-content">
+                        <a href="~/home/Addmission">Admissions</a>
+                        <a href="#">Scholarship</a>
+                        <a href="#">Examination</a>
+                        <a href="/home/Result">Results</a>
+                        <a href="#">Manage Results</a>
+                        <a href="~/home/Attedence">Attedence</a>
+                    </div>
+                </div>
+
+                <li> <a href="~/home/Adminlogin">Admin login </a></li>
+                <li> <a href="/home/signup">SignUp</a></li>
+                <li> <a href="/home/login">Login</a></li>
+
+                <div>
+                    <a href="~/home/login"> <button class="login"> <img src="~/image/loginavarter.png" style="width:50px" />   </button> </a>
+                </div>
+
+            </ul>
+        </div>
+        </div>
+
+            @RenderBody()
+             <footer>
+      
+        <p>
+            Author: Hege Refsnes<br>
+            <a href="mailto:20101001-075@uskt.edu.pk">Usman</a>
+        </p>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+
+    </footer>
+    </div>
+</body>
+</html>
