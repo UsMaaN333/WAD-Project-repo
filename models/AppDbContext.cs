@@ -5,10 +5,11 @@ namespace WAD_SRMS_Project.Models
 {
     public class AppDbContext:DbContext
     {
+
         public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
         {
 
         }
-        public DbSet<AddmissionModel> AddmissionModels { get; set; }
+        public DbSet<Login> Login { get; set; }
     }
 }

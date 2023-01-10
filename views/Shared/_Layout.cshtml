@@ -7,62 +7,69 @@
 </head>
 <body>
     <div>
+        <header>
+            <div class="container">
+            <div class="navbar">
+                <ul>
 
-         <div class="container">
-        <div class="navbar">
-            <ul>
-
-                <li> <a href="~/home/Index">Home</a></li>
+                    <li> <a href="~/home/Index">Home</a></li>
 
 
-                <div class="dropdown">
-                    <button class="dropbtn">Faculities</button>
-                    <div class="dropdown-content">
-                        <a href="#Art">Arts</a>
-                        <a href="~/home/science">Science</a>
-                        <a href="#commerce">Commerce</a>
-                        <a href="/home/technology">Technology</a>
-                        <a href="#Sport">Sports</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Faculities</button>
+                        <div class="dropdown-content">
+                            <a href="#Art">Arts</a>
+                            <a href="~/home/science">Science</a>
+                            <a href="#commerce">Commerce</a>
+                            <a href="/home/technology">Technology</a>
+                            
 
+                        </div>
                     </div>
-                </div>
 
-                <div class="dropdown">
-                    <button class="dropbtn">Student </button>
-                    <div class="dropdown-content">
-                        <a href="~/home/Addmission">Admissions</a>
-                        <a href="#">Scholarship</a>
-                        <a href="#">Examination</a>
-                        <a href="/home/Result">Results</a>
-                        <a href="#">Manage Results</a>
-                        <a href="~/home/Attedence">Attedence</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Student </button>
+                        <div class="dropdown-content">
+                            <a href="~/home/Addmission">Admissions</a>
+                            <a href="#">Scholarship</a>
+                            <a href="#">Examination</a>
+                            <a href="/home/Result">Results</a>
+                            <a href="~/home/Attedence">Attedence</a>
+                        </div>
                     </div>
-                </div>
 
-                <li> <a href="~/home/Adminlogin">Admin login </a></li>
-                <li> <a href="/home/signup">SignUp</a></li>
-                <li> <a href="/home/login">Login</a></li>
+                    <li> <a href="~/home/Adminlogin">Admin login </a></li>
+                    <li> <a href="/home/signup">SignUp</a></li>
+                    <li> <a href="/home/login">Login</a></li>
 
-                <div>
-                    <a href="~/home/login"> <button class="login"> <img src="~/image/loginavarter.png" style="width:50px" />   </button> </a>
-                </div>
+                    <div>
+                        <a href="~/home/login"> <button class="login"> <img src="~/image/loginavarter.png" style="width:50px" />   </button> </a>
+                    </div>
 
-            </ul>
+                </ul>
+            </div>
         </div>
-        </div>
+        </header>
+        
 
-            @RenderBody()
-             <footer>
-      
-        <p>
-            Author: Hege Refsnes<br>
-            <a href="mailto:20101001-075@uskt.edu.pk">Usman</a>
-        </p>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-google"></a>
+        @RenderBody()
+        <footer>
 
-    </footer>
+            <div class="mail">
+                
+                <a href="mailto:20101001-075@uskt.edu.pk" class="material-icons">&#xe0be;</a>
+               
+            
+            
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/" class="fa fa-twitter"></a>
+            <a href="https://www.google.com.pk/" class="fa fa-google"></a>
+            <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+            </div>
+            
+
+        </footer>
     </div>
 </body>
 </html>

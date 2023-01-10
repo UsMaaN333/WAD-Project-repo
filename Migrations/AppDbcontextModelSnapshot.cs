@@ -21,26 +21,29 @@ namespace WADSRMSProject.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WAD_SRMS_Project.models.AddmissionModel", b =>
+            modelBuilder.Entity("WAD_SRMS_Project.models.Login", b =>
                 {
-                    b.Property<string>("Email_Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Property<string>("First_Name")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Last_Name")
+                    b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Mobile_Number")
+                    b.Property<string>("Repeat_Password")
                         .IsRequired()
-                        .HasColumnType("varchar(12)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Email_Id");
+                    b.HasKey("Id");
 
-                    b.ToTable("AddmissionModels");
+                    b.ToTable("Login");
                 });
 #pragma warning restore 612, 618
         }

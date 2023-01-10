@@ -1,17 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WAD_SRMS_Project.controllers
 {
+    
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+      
+       
         public IActionResult Adminlogin()
         {
             return View();
         }
+       
         public IActionResult signup()
         {
             return View();
@@ -24,6 +25,7 @@ namespace WAD_SRMS_Project.controllers
         {
             return View();
         }
+       
         public IActionResult Login()
         {
             return View();
@@ -40,18 +42,11 @@ namespace WAD_SRMS_Project.controllers
         {
             return View();
         }
-
-        public IActionResult feedback(string username, string userpass)
+        public IActionResult Index()
         {
-            if(username=="text" && userpass=="terxt")
-            {
-                ViewBag.Message = "login Successfully";
-            }
-            else
-            {
-                ViewBag.Message = "login not Successfully";
-            }
-            return View(Addmission);
+            return View();
         }
+
+
     }
 }

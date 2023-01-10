@@ -1,9 +1,81 @@
 ﻿<html>
 <head>
-    <title>Student Registration Form</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <title>Student Registration Form</title>
     <style>
+        
+        
+        
+         
+       :root {
+            --blue: #1e90ff;
+            --white: #ffffff;
+            --darkblue: #0A2647;
+            --darkblue2: #144272;
+            --darkblue3: #2C74B3;
+            --black: #1A0000;
+            --fullblue: #1C315E;
+            --gray:#282A3A;
+            --gray1:#3F4E4F;
+            --gray2:#7F8487;
+        }
 
-        /*header menu*/
+        footer {
+            background-color: var(--darkblue);
+            border-width: 50px;
+            padding: 20px;
+            text-align: center;margin:10px;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 20px;
+            text-align: justify;
+            text-decoration: none;
+        }
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .fa-pinterest {
+            background: #cb2027;
+            color: white;
+        }
+
+
         .title {
             font-size: 45px;
             display: flex;
@@ -12,60 +84,66 @@
             height: 80px;
         }
 
-        li a, .dropbtn {
+        li a {
             text-decoration: none;
-            font-style: normal;
+            font-style:normal;
             height: 20px;
             display: flex;
             align-items: center;
             padding: 10px;
-            font-size: 20px;
-            font-style:oblique;
+            font-size: 30px;
+            font-style: oblique;
+        }
+
+        .dropbtn {
+           
+            font-style: normal;
+            height: 10px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            font-size: 30px;
+            font-style:normal;
         }
 
         .navbar {
-            background-color: black;
+            background-color: var(--fullblue);
+            
+
         }
 
-        .navbar a {
+            .navbar a {
                 float: left;
                 display: block;
-                color: white;
+                color:var(--white);
                 text-align: center;
-                padding: 14px 16px;
-                margin: 10px;
-                font-style: normal;
-                font-size: 20px;
-        }
+                padding: 15px;
+                
+                font-style:normal;
+                font-size: 25px;
+            }
 
         ul {
             list-style-type: none;
-            margin: 30px 0;
+            
             padding: 5px;
             display: flex;
             justify-content: space-evenly;
             border-style: solid;
         }
-
-        body {
-            font-size: 16px;
-            background-color: white;
-            color: black;
-            font-family: 'Times New Roman', Times, serif;
-        }
-
         .dropbtn {
-            background-color: gray;
-            color: black;
+            background-color:var(--darkblue3);
+            color:var(--white);
             padding: 20px;
-            font-size: 16px;
-            margin: 10px;
+            margin: 15px;
+            font-size: 20px;
+            
         }
 
         .dropdown-content {
             position: absolute;
-            background-color: aqua;
-            min-width: 11px;
+            background-color:var(--gray2);
+            min-width: 5px;
             display: none;
         }
 
@@ -78,16 +156,32 @@
                 text-align: left;
             }
 
-            .dropdown-content a:hover {
-                    background-color: red;
-                }
+        .main span {
+            font-size: 25px;
+            font-style:normal;
+        }
 
-            .dropdown:hover .dropdown-content {
+        p {
+            display: block;
+            margin-block-start: 0em;
+            margin-block-end: 2em;
+            margin-inline-start: 5px;
+            margin-inline-end: 5px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color:var(--darkblue3);
+        }
+
+        .dropdown:hover .dropdown-content {
             display: block;
         }
 
-             .dropdown:hover .dropbtn {
-            background-color: blue;
+        .dropdown:hover .dropbtn {
+            background-color:var(--gray2);
         }
 
 
@@ -102,7 +196,7 @@
 
         table {
             font-family: verdana;
-            color: black;
+            color:var(--black);
             font-size: 16px;
             font-style: normal;
             font-weight: bold;
@@ -110,6 +204,7 @@
             border-collapse: collapse;
             border: 4px solid black;
             border-style: solid;
+           
         }
 
             table.inner {
@@ -129,6 +224,8 @@
             margin: 5px 0;
             box-sizing: border-box;
         }
+
+         
     </style>
    
 </head>
@@ -291,9 +388,9 @@
         </tr>
 
         <tr>
-            <td>Pin Code</td>
+            <td>zip Code</td>
             <td>
-                <input type="Number" name="PinCode" maxlength="6" placeholder="******" />
+                <input type="Number" name="ZipCode" maxlength="6" placeholder="******" />
                 (Max 6 Numbers Allowed)
             </td>
         </tr>
@@ -371,7 +468,7 @@
 
         <tr>
             <td colspan="2" align="center">
-              <a href="~/home/Index"> <input type="button" value="Submit"> </a> 
+              <a href="#"> <input type="button" value="Submit"> </a> 
                 <input type="button" value="Reset">
                <a href="~/home/Index"><input type="button" value="Cancel"></a> 
             </td>
