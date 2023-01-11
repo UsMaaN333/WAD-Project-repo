@@ -24,6 +24,6 @@ app.UseRouting();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{Controller=Home}/{action=index}/{id?}");
+    pattern: "{Controller=CRUD_Operation}/{action=index}/{id?}");
 app.Run();
         

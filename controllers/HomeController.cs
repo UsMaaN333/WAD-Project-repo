@@ -42,7 +42,7 @@ namespace WAD_SRMS_Project.controllers
         {
             return View();
         }
-        public IActionResult Index()
+        public IActionResult Homepage()
         {
             return View();
         }

@@ -12,7 +12,8 @@ namespace WAD_SRMS_Project.models
 
         public string Password { get; set; }
         [Required]
-
+        
         public string Repeat_Password { get; set; }
+        
     }
 }

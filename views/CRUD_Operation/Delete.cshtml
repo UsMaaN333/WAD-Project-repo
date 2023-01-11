@@ -1,15 +1,14 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<html>
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   
-    <style>
+﻿@model WAD_SRMS_Project.models.Login
 
-         :root {
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
             --blue: #1e90ff;
             --white: #ffffff;
             --darkblue: #0A2647;
@@ -36,7 +35,12 @@
             text-align: justify;
             text-decoration: none;
         }
+        .material-icons{
+            background-color:white;
+            color:black;
 
+
+        }
             .fa:hover {
                 opacity: 0.7;
             }
@@ -71,10 +75,7 @@
             color: white;
         }
 
-        .fa-pinterest {
-            background: #cb2027;
-            color: white;
-        }
+
 
 
         .title {
@@ -88,7 +89,7 @@
         li a {
             text-decoration: none;
             font-style:normal;
-            height: 20px;
+
             display: flex;
             align-items: center;
             padding: 10px;
@@ -97,7 +98,7 @@
         }
 
         .dropbtn {
-           
+
             font-style: normal;
             height: 10px;
             display: flex;
@@ -109,7 +110,7 @@
 
         .navbar {
             background-color: var(--fullblue);
-            
+
 
         }
 
@@ -119,14 +120,14 @@
                 color:var(--white);
                 text-align: center;
                 padding: 15px;
-                
+
                 font-style:normal;
                 font-size: 25px;
             }
 
         ul {
             list-style-type: none;
-            
+
             padding: 5px;
             display: flex;
             justify-content: space-evenly;
@@ -138,7 +139,7 @@
             padding: 20px;
             margin: 15px;
             font-size: 20px;
-            
+
         }
 
         .dropdown-content {
@@ -184,85 +185,37 @@
         .dropdown:hover .dropbtn {
             background-color:var(--gray2);
         }
+        </style>
+<h1>Delete</h1>
 
-        fieldset {
-            padding:10px;
-            margin:20px;
-        }
-        legend{
-            font-size:20px;
-        }
-        .stdinfo{
-            font-size:30px;
-            padding:20px;
-            margin:20px;
-           
-        }
-        .marks{
-             font-size:30px;
-            padding:20px;
-            margin:20px;
-        }
-        .Grades{
-             font-size:30px;
-            padding:20px;
-            margin:20px;
-        }
-        .cancelbtn{
-            font-size:20px;
-            padding:10px;
-            margin:10px;
-        }
-        .submitbtn{
-            font-size:20px;
-            padding:10px;
-            margin:10px;
-        }
-        
-    </style>
-</head>
-<body>
-    <form method="post">
-
-        <fieldset>
-            <legend>Student Info</legend>
-            <div class="stdinfo">
-                Student Name:<input type="text" placeholder="Enter Name" /></br>
-                Student Roll-No:<input type="text" placeholder="Enter Roll Number" /></br>
-                Section:<input type="text" placeholder="Enter Section" /></br>
-                Semester:<input type="text" placeholder="Enter Senester" /></br>
-                Department:<input type="text" placeholder="Enter Department" /></br>
-                Program:<input type="text" placeholder="Enter Program" /></br>
-            </div>
-            </br>
-        </fieldset>
-
-        <fieldset>
-            <legend>Student Marks </legend>
-            <div class="marks">
-                Math:<input type="text" placeholder="Enter marks" /></br>
-                English:<input type="text" placeholder="Enter marks" /></br>
-                Urdu:<input type="text" placeholder="Enter marks" /></br>
-                Computer:<input type="text" placeholder="Input marks" /></br>
-                WAD:<input type="text" placeholder="Enter marks" /></br>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Student Grades</legend>
-            <select name="Grades">
-               <option value="Value 1"selected="selected">Grades</option>
-                <option value="Value 2"> A+</option>
-                <option value="Value 3">B+</option>
-                <option value="Value 4">C+</option>
-                <option value="Value 5">D+</option>
-            </select>
-
-        </fieldset>
-          <a href="~/home/Homepage" ><button type="button"  class="cancelbtn">Cancel</button></a> 
-         <a href="#" ><button type="button"  class="submitbtn">Submit Marks</button></a>
-
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Login</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Repeat_Password)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Repeat_Password)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index" href="/CRUD_Operation/index">Back to List</a>
     </form>
-
-
-</body>
-</html>
+</div>

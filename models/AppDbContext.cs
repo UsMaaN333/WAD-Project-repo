@@ -10,6 +10,6 @@ namespace WAD_SRMS_Project.Models
         {
 
         }
-        public DbSet<Login> Login { get; set; }
+        public DbSet<Login> loginmodel { get; set; }
     }
 }
